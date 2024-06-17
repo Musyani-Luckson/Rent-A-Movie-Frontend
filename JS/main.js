@@ -5,17 +5,19 @@ import { table, renderTable } from "./Table.js";
 const headers = [
     `No.`,
     `ID`,
-    `Phone`,
-    `Name`,
-    `Street`,
-    `City`,
-    `State`,
-    `Zip Code`
+    `Customer`,
+    `Movies`,
+    `Price (K)`,
+    `Tax (K)`,
+    `Total (K)`,
+    `Date`
 ]
 // 
 renderCustomerList()
 export function renderCustomerList() {
-    const url = `../CustomData/customers.json`;
+    const backend = `https://rent-a-movie-api.onrender.com`
+    // const url = `${backend}/v1/get_recent_transactions`;
+    const url = `../CustomData/Recent.json`;
     const configs = {
         method: `GET`
     }

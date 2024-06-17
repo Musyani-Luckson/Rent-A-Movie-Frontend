@@ -16,7 +16,9 @@ const headers = [
 renderCustomerList()
 export function renderCustomerList() {
     const backend = `https://rent-a-movie-api.onrender.com`
-    const url = `${backend}/v1/get_transaction_list_data`;
+    // const url = `${backend}/v1/get_transaction_list_data`;
+    const url = `../CustomData/transactions.json`;
+
     const configs = {
         method: `GET`
     }
