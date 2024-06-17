@@ -1,0 +1,6 @@
+    thead th {
+      position: sticky;
+      top: 0;
+      background-color: #fff; /* Ensure background matches your table */
+      z-index: 1000; /* Ensure the header stays above the table rows */
+    }

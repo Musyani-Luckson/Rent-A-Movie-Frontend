@@ -1,0 +1,21 @@
+.mobileMenuLink {
+  display: grid;
+  grid-template-columns: 3.5rem 1fr;
+  grid-template-rows: 3rem 1fr;
+  grid-gap: 1pt;
+}
+
+.pageMobIconDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: x-large;
+}
+
+.pageMobTextDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: small;
+}

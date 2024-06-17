@@ -1,0 +1,35 @@
+.mainHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Mobile Devices (portrait and landscape) up to 767px */
+@media only screen and (max-width: 567px) {
+  .mobileMenuBtn {
+    display: block;
+  }
+  .largeScreensMenuBtn {
+    display: none;
+  }
+}
+/* Tablets and Min Laptops 768px */
+@media only screen and (min-width: 568px) {
+  .mobileMenuBtn {
+    display: none;
+  }
+  .largeScreensMenuBtn {
+    display: block;
+  }
+}
+/* Desktops and larger screens 1340px*/
+@media only screen and (min-width: 840px) {
+  .mobileMenuBtn {
+    display: none;
+  }
+  .largeScreensMenuBtn {
+    display: block;
+  }
+}

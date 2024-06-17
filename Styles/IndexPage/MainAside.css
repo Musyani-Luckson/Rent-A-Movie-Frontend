@@ -1,0 +1,96 @@
+.mainAside {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
+  background: white;
+}
+
+/* Mobile Devices (portrait and landscape) up to 767px */
+@media only screen and (max-width: 567px) {
+}
+/* Tablets and Min Laptops 768px */
+@media only screen and (min-width: 568px) {
+  .mainAsideTop {
+    position: absolute;
+    height: 5rem;
+    top: 0;
+    width: 4rem;
+  }
+  .mainAsideMid {
+    position: absolute;
+    top: 5rem;
+    bottom: 5rem;
+    width: 4rem;
+  }
+  .mainAsideBottom {
+    position: absolute;
+    height: 5rem;
+    bottom: 0;
+    width: 4rem;
+  }
+  .eachPageOuterLink {
+    display: grid;
+    grid-template-columns: 3.5rem;
+    grid-template-rows: 3.5rem;
+    grid-gap: 1pt;
+    padding: 1pt;
+  }
+
+  .pageIconDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: large;
+  }
+
+  .pageTextDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    display: none;
+  }
+}
+/* Desktops and larger screens 1340px*/
+@media only screen and (min-width: 840px) {
+  .mainAsideTop {
+    position: absolute;
+    height: 5rem;
+    top: 0;
+    width: 9rem;
+  }
+  .mainAsideMid {
+    position: absolute;
+    top: 5rem;
+    bottom: 5rem;
+    width: 9rem;
+  }
+  .mainAsideBottom {
+    position: absolute;
+    height: 5rem;
+    bottom: 0;
+    width: 9rem;
+  }
+  .eachPageOuterLink {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    grid-template-rows: 3rem;
+    grid-gap: 1pt;
+    padding: 1pt;
+  }
+
+  .pageIconDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: large;
+  }
+
+  .pageTextDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: small;
+  }
+}
