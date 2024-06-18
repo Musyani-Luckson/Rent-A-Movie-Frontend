@@ -1,0 +1,92 @@
+[
+  {
+    "Movie_ID": 1,
+    "Movie_Title": "No Strings Attached",
+    "Total_Transactions": 8,
+    "Actual_Price": "10.00",
+    "Total_Price_Without_Tax": "80.00",
+    "Total_Tax_Amount": "8.00",
+    "Total_Price_With_Tax": "88.00"
+  },
+  {
+    "Movie_ID": 2,
+    "Movie_Title": "Kung Fu Panda 4",
+    "Total_Transactions": 8,
+    "Actual_Price": "15.00",
+    "Total_Price_Without_Tax": "120.00",
+    "Total_Tax_Amount": "12.00",
+    "Total_Price_With_Tax": "132.00"
+  },
+  {
+    "Movie_ID": 4,
+    "Movie_Title": "The Nun",
+    "Total_Transactions": 8,
+    "Actual_Price": "13.40",
+    "Total_Price_Without_Tax": "107.20",
+    "Total_Tax_Amount": "10.72",
+    "Total_Price_With_Tax": "117.92"
+  },
+  {
+    "Movie_ID": 3,
+    "Movie_Title": "The Amazing Spider-Man",
+    "Total_Transactions": 7,
+    "Actual_Price": "11.50",
+    "Total_Price_Without_Tax": "80.50",
+    "Total_Tax_Amount": "8.05",
+    "Total_Price_With_Tax": "88.55"
+  },
+  {
+    "Movie_ID": 5,
+    "Movie_Title": "Spirited Away",
+    "Total_Transactions": 7,
+    "Actual_Price": "13.50",
+    "Total_Price_Without_Tax": "94.50",
+    "Total_Tax_Amount": "9.45",
+    "Total_Price_With_Tax": "103.95"
+  },
+  {
+    "Movie_ID": 6,
+    "Movie_Title": "Avatar the Last Airbender",
+    "Total_Transactions": 3,
+    "Actual_Price": "10.50",
+    "Total_Price_Without_Tax": "31.50",
+    "Total_Tax_Amount": "3.15",
+    "Total_Price_With_Tax": "34.65"
+  },
+  {
+    "Movie_ID": 8,
+    "Movie_Title": "Harry Potter and the Chamber of Secrets",
+    "Total_Transactions": 3,
+    "Actual_Price": "10.00",
+    "Total_Price_Without_Tax": "30.00",
+    "Total_Tax_Amount": "3.00",
+    "Total_Price_With_Tax": "33.00"
+  },
+  {
+    "Movie_ID": 7,
+    "Movie_Title": "Spider-Man No Way Home",
+    "Total_Transactions": 2,
+    "Actual_Price": "14.50",
+    "Total_Price_Without_Tax": "29.00",
+    "Total_Tax_Amount": "2.90",
+    "Total_Price_With_Tax": "31.90"
+  },
+  {
+    "Movie_ID": 9,
+    "Movie_Title": "Suicide Squad",
+    "Total_Transactions": 2,
+    "Actual_Price": "13.00",
+    "Total_Price_Without_Tax": "26.00",
+    "Total_Tax_Amount": "2.60",
+    "Total_Price_With_Tax": "28.60"
+  },
+  {
+    "Movie_ID": 10,
+    "Movie_Title": "Barbie",
+    "Total_Transactions": 2,
+    "Actual_Price": "14.00",
+    "Total_Price_Without_Tax": "28.00",
+    "Total_Tax_Amount": "2.80",
+    "Total_Price_With_Tax": "30.80"
+  }
+]

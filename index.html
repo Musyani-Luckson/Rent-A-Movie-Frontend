@@ -18,6 +18,9 @@
         crossorigin="anonymous"></script>
     <!-- FOR ICONS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+
     <title>Dashboard</title>
 </head>
 
@@ -90,7 +93,7 @@
                         Earnings
                     </div>
                     <div class="card-body border-0">
-                        <div class="border-0">
+                        <div class="border-0 totals">
                             K 0000
                         </div>
                     </div>
@@ -101,7 +104,7 @@
                         Customers
                     </div>
                     <div class="card-body border-0">
-                        <div class="border-0">
+                        <div class="border-0 totals">
                             000
                         </div>
                     </div>
@@ -112,7 +115,7 @@
                         Movies
                     </div>
                     <div class="card-body border-0">
-                        <div class="border-0">
+                        <div class="border-0 totals">
                             000
                         </div>
                     </div>
@@ -123,7 +126,7 @@
                         Transactions
                     </div>
                     <div class="card-body border-0">
-                        <div class="border-0">
+                        <div class="border-0 totals">
                             000
                         </div>
                     </div>
@@ -135,35 +138,20 @@
                 <!--  -->
                 <div class="card text-center m-1 col-12 col-sm-4 col-md-3 col-lg-2">
                     <div class="card-body border-0">
-                        <h5 class="card-title border-0">Movies</h5>
-                        <div class="card-text border-0">
-                            Rented against unrented
-                        </div>
+                        <canvas id="movieChart" style="width:100%; max-width:500px"></canvas>
                     </div>
                 </div>
                 <!--  -->
                 <div class="card text-center m-1 col-12 col-sm-4 col-md-3 col-lg-2">
                     <div class="card-body border-0">
-                        <h5 class="card-title border-0">Movies Rents</h5>
-                        <div class="card-text border-0">
-                            Data of each rentng
-                        </div>
-                    </div>
-                </div>
-                <!--  -->
-                <div class="card text-center m-1 col-12 col-sm-4 col-md-3 col-lg-2">
-                    <div class="card-body border-0">
-                        <h5 class="card-title border-0">Customer</h5>
-                        <div class="card-text border-0">
-                            Renting against unrenting
-                        </div>
+                        <canvas id="customerChart" style="width:100%; max-width:500px"></canvas>
                     </div>
                 </div>
                 <!--  -->
             </div>
             <!--  -->
             <div class="mainMainTopRight m-1 p-1">
-                <div class="">
+                <div class="h5 m-1">
                     5 Recent Transactions
                 </div>
                 <div class="" id="recentTransactions">
@@ -223,6 +211,7 @@
             </div>
         </div>
         <script src="./JS/main.js" type="module"></script>
+
 </body>
 
 </html>
