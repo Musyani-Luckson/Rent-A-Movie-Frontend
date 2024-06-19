@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--  -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+                crossorigin="anonymous"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+
+         -->
+
+    <link rel="stylesheet" href="../Styles/auth.css">
+    <title>Account</title>
+</head>
+
+<body>
+
+    <div class="logReg">
+        <div class="form_box">
+
+            <div class="button_box">
+                <div id="btn"></div>
+                <button type="button" class="toggle_btn" onclick="login()">Log In</button>
+                <button type="button" class="toggle_btn" onclick="register()">Register</button>
+            </div>
+
+            <form id="login" class="input_group">
+                <input type="text" class="textField" placeholder="Enter email" name="email" required>
+                <input type="password" class="textField" placeholder="Enter Password" name="password" required>
+                <br>
+                <br>
+                <!-- <a href="#">Forgot Password?</a> -->
+                <button type="submit" class="submit_btn">Log In</button>
+            </form>
+            <!--  -->
+            <form id="register" class="input_group">
+                <input type="text" class="textField" placeholder="First Name" required>
+                <input type="email" class="textField" placeholder="Email" required>
+                <input type="text" class="textField" placeholder="Create Password" required>
+                <!-- <input type="checkbox" class="checkbox"><span>I agree to the Ts & Cs</span> -->
+                <button type="submit" class="submit_btn">Register</button>
+            </form>
+            <!--  -->
+        </div>
+    </div>
+
+    <script src="../JS/Account.js" type="module">
+        // // 
+        // const login = getElementById(`#login`);
+        // const register = getElementById(`#register`);
+        // const btn = getElementById(`#btn`);
+        // //
+        // function register() {
+        //     login.style.left = "-400px";
+        //     register.style.left = "30px";
+        //     btn.style.left = "110px";
+        // }
+        // //
+        // function login() {
+        //     login.style.left = "50px";
+        //     register.style.left = "450px";
+        //     btn.style.left = "0";
+        // }
+    </script>
+</body>
+
+</html>

@@ -4,12 +4,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Styles/landing_page.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- FOR ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+
+    <link rel="stylesheet" href="../Styles/signup.css">
+
     <title>Signup</title>
 </head>
 
-<body>
-    Signup
+<body class="">
+    <div class="mainBox">
+        <div class="mainBoxOne">
+            <div class="h3">Admin</div>
+        </div>
+        <div class="mainBoxTwo">
+            <div></div>
+            <div class="formHeader h1">
+                <i class="bi-person-circle"></i> Signup
+            </div>
+            <div class="formBody">
+                <form class="formElement" id="signupForm">
+                    <div class="row">
+                        <div class="form-floating mb-3 col">
+                            <input type="test" class="form-control" id="signupFirstName" placeholder="First name"
+                                name="first_name" required>
+                            <label class="ms-2" for="signupFirstName">
+                                <i class="bi-person-badge-fill"></i>
+                                First name
+                            </label>
+                            <div class="text-danger formMsg" id="signupFirstNameMsg">
+                            </div>
+                        </div>
+                        <div class="form-floating mb-2 col ps-1">
+                            <input type="text" class="form-control" id="signupLastName" placeholder="lastname"
+                                name="last_name" required>
+                            <label for="signupLastName">
+                                <i class="bi-person-badge-fill"></i>
+                                Last name
+                            </label>
+                            <div class="text-danger formMsg" id="signupLastNameMsg">
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="signupEmail" placeholder="Email" name="email"
+                            required>
+                        <label for="signupEmail">
+                            <i class="bi-envelope-fill"></i>
+                            Email
+                        </label>
+                        <div class="text-danger formMsg" id="signupEmailMsg">
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="signupCreatePassword" placeholder="Password"
+                            name="password" required>
+                        <label for="signupCreatePassword">
+                            <i class="bi-shield-lock-fill"></i>
+                            Create Password
+                        </label>
+                        <div class="text-danger formMsg" id="signupPasswordMsg">
+
+                        </div>
+                    </div>
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="signupComfirmPassword" placeholder="Password"
+                            name="comfirm" required>
+                        <label for="signupComfirmPassword">
+                            <i class="bi-shield-lock-fill"></i>
+                            Comfirm Password
+                        </label>
+                        <div class="text-danger formMsg" id="signupComfirmMsg">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success border-0 btn-sm m-2">
+                        Signup
+                    </button>
+                </form>
+            </div>
+            <div class="formBody">
+                Already got an account <a href="./signin.html" class="">Signin</a>
+            </div>
+            <div></div>
+        </div>
+    </div>
+    <script src="../JS/signup.js" type="module"></script>
 </body>
 
 </html>

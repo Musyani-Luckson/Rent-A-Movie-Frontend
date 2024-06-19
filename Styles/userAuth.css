@@ -1,0 +1,21 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  min-height: 100vh;
+  display: grid;
+}
+/*  */
+.create-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+/*  */
+.errMsg {
+  font-size: 0.8rem;
+  font-weight: bolder;
+  padding-left: 0.3rem;
+}

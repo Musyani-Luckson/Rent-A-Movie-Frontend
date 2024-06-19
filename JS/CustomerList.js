@@ -2,6 +2,9 @@
 import { Utilities } from "../modules/utilities.js";
 const utilities = new Utilities();
 import { table, renderTable } from "./Table.js";
+import { backend } from "../JS/backend.js";
+const apiKey = `v1/get_customer_list_data`
+const url = `${backend()}${apiKey}`;
 
 // 
 const headers = [
@@ -17,7 +20,7 @@ const headers = [
 // 
 renderCustomerList()
 export function renderCustomerList() {
-    const url = `../CustomData/customers.json`;
+    // const url = `../CustomData/customers.json`;
     const configs = {
         method: `GET`
     }

@@ -2,6 +2,9 @@
 import { Utilities } from "../modules/utilities.js";
 const utilities = new Utilities();
 import { table, renderTable } from "./Table.js";
+import { backend } from "../JS/backend.js";
+const apiKey = `v1/get_transaction_list_data`
+const url = `${backend()}${apiKey}`;
 // 
 const headers = [
     `No.`,
@@ -15,10 +18,7 @@ const headers = [
 // 
 renderCustomerList()
 export function renderCustomerList() {
-    const backend = `https://rent-a-movie-api.onrender.com`
-    // const url = `${backend}/v1/get_transaction_list_data`;
-    const url = `../CustomData/transactions.json`;
-
+    // const url = `../CustomData/transactions.json`;
     const configs = {
         method: `GET`
     }

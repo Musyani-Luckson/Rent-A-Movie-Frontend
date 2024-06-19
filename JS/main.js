@@ -1,5 +1,6 @@
 import { Utilities } from "../modules/utilities.js";
 const utilities = new Utilities();
+import { backend } from "../JS/backend.js";
 import { table, renderTable } from "./Table.js";
 // 
 const headers = [
@@ -15,30 +16,39 @@ const headers = [
 // 
 renderCustomerList()
 export function renderCustomerList() {
-    const backend = `https://rent-a-movie-api.onrender.com`
-    // const url = `${backend}/v1/get_recent_transactions`;
-    const url = `../CustomData/Recent.json`;
+    // const url = `../CustomData/Recent.json`;
+    const apiKey = `v1/get_recent_transactions`
+    const url = `${backend()}${apiKey}`;
+
+    utilities.print(backend())
+
+
     const configs = {
         method: `GET`
     }
     utilities.fetchData(url, configs, response => {
+
+
         const data = table(response, headers);
         renderTable(data, `recentTransactions`);
     })
 }
 
 
-totals()
+// totals()
 function totals() {
-    // const backend = `https://rent-a-movie-api.onrender.com`
-    // const url = `${backend}/v1/get_recent_transactions`;
-    const url = `../CustomData/Totals.json`;
+    // const url = `../CustomData/Totals.json`;
+    const apiKey = `v1/get_totals`
+    const url = `${backend()}${apiKey}`;
     const configs = {
         method: `GET`
     }
     // 
-    utilities.fetchData(url, configs, response => {
-        response = Object.values(response[0])
+    utilities.fetchData(`http://localhost:1605/v1/get_totals`, configs, response => {
+
+        utilities.print(response)
+        return 0
+        // response = Object.values(response[0])
         const totals = utilities.getDom(`.totals`);
         let counter = 0;
         response.map(value => {
@@ -53,11 +63,11 @@ function totals() {
 }
 //
 // 
-RentSummary()
+// RentSummary()
 function RentSummary() {
-    // const backend = `https://rent-a-movie-api.onrender.com`
-    // const url = `${backend}/v1/get_recent_transactions`;
-    const url = `../CustomData/RentalSummary.json`;
+    // const url = `../CustomData/RentalSummary.json`;
+    const apiKey = `v1/get_rental_status_summary`
+    const url = `${backend()}${apiKey}`;
     const configs = {
         method: `GET`
     }
@@ -114,13 +124,12 @@ function RentSummary() {
     })
 }
 
-
 // 
-MovieDetails()
+// MovieDetails()
 function MovieDetails() {
-    // const backend = `https://rent-a-movie-api.onrender.com`
-    // const url = `${backend}/v1/get_recent_transactions`;
-    const url = `../CustomData/MovieData.json`;
+    // const url = `../CustomData/MovieData.json`;
+    const apiKey = `v1/get_each_movie_earnings`
+    const url = `${backend()}${apiKey}`;
     const configs = {
         method: `GET`
     }
@@ -129,8 +138,6 @@ function MovieDetails() {
         response = getMovieDetails(response)
         const groupedDetails = groupMovieDetails(response);
 
-        // utilities.print(groupedDetails)
-
         const valuesMovies = groupedDetails.totalPriceWithTax;
         const subjectsMovies = groupedDetails.names;
 
@@ -138,24 +145,6 @@ function MovieDetails() {
             "#b91d47",
             "#00aba9"
         ];
-        
-        // new Chart("movieChart", {
-        //     type: "pie",
-        //     data: {
-        //         labels: subjectsMovies,
-        //         datasets: [{
-        //             backgroundColor: barColorsCustomers,
-        //             data: valuesMovies
-        //         }]
-        //     },
-        //     options: {
-        //         title: {
-        //             display: true,
-        //             text: "Movie Earnings"
-        //         }
-        //     }
-        // });
-        // 
     })
 }
 

@@ -52,8 +52,8 @@ Utilities.prototype.ensureDoubleDigit = function (didgit) {
 };
 // HANDLE EVENT
 Utilities.prototype.handleEvent = function (target, event, callback) {
-  target.addEventListener(event, () => {
-    return callback(target);
+  target.addEventListener(event, (e) => {
+    return callback(e);
   });
 };
 //
