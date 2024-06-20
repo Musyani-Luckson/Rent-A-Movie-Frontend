@@ -19,23 +19,17 @@ export function renderCustomerList() {
     // const url = `../CustomData/Recent.json`;
     const apiKey = `v1/get_recent_transactions`
     const url = `${backend()}${apiKey}`;
-
-    utilities.print(backend())
-
-
     const configs = {
         method: `GET`
     }
     utilities.fetchData(url, configs, response => {
-
-
         const data = table(response, headers);
         renderTable(data, `recentTransactions`);
     })
 }
 
 
-// totals()
+totals()
 function totals() {
     // const url = `../CustomData/Totals.json`;
     const apiKey = `v1/get_totals`
@@ -63,7 +57,7 @@ function totals() {
 }
 //
 // 
-// RentSummary()
+RentSummary()
 function RentSummary() {
     // const url = `../CustomData/RentalSummary.json`;
     const apiKey = `v1/get_rental_status_summary`
@@ -125,7 +119,7 @@ function RentSummary() {
 }
 
 // 
-// MovieDetails()
+MovieDetails()
 function MovieDetails() {
     // const url = `../CustomData/MovieData.json`;
     const apiKey = `v1/get_each_movie_earnings`
