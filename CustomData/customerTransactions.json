@@ -1,0 +1,20 @@
+   [
+    {
+      "Transaction_ID": 8,
+      "Transaction_Date": "2024-04-05T22:00:00.000Z",
+      "Title": "No Strings Attached",
+      "Type": "Romance",
+      "Price": "10.00",
+      "Tax": "1.00",
+      "Total": "11.00"
+    },
+    {
+      "Transaction_ID": 9,
+      "Transaction_Date": "2024-01-18T22:00:00.000Z",
+      "Title": "The Nun",
+      "Type": "Horror",
+      "Price": "13.40",
+      "Tax": "1.34",
+      "Total": "14.74"
+    }
+  ]

@@ -7,6 +7,7 @@ Utilities.prototype.fetchData = function (apiUrl, configs, callback) {
   return fetch(apiUrl, configs)
     .then(response => response.json())
     .then(data => {
+      // console.log(data)
       callback(data)
     })
     .catch(error => {

@@ -57,7 +57,10 @@ utilities.handleEvent(form, `submit`, event => {
             const target = response.error.target;
             utilities.setInnerText(msgBoxes[target], msg)
         } else {
-            redirectTo('../index.html', 1500, true);
+            localStorage.clear(`admin`)
+            localStorage.setItem(`admin`, response.email)
+            // utilities.print(utilities.browserStorageUse(`GET`, `admin`, localStorage))
+            redirectTo('../index.html', 1500, false);
         }
     })
 })

@@ -1,0 +1,94 @@
+{
+  "results": [
+    {
+      "ID": 6,
+      "Title": "Avatar the Last Airbender",
+      "Type": "Drama",
+      "Price": "10.50",
+      "Tax": "1.05",
+      "Total": "11.55",
+      "Actors": "Zach Tyler Eisen, Jack De Sena, Dante  Basco, Mae  Whitman, Michaela Jill Murphy"
+    },
+    {
+      "ID": 10,
+      "Title": "Barbie",
+      "Type": "Comedy",
+      "Price": "14.00",
+      "Tax": "1.40",
+      "Total": "15.40",
+      "Actors": "Margot  Robbie, Simu  Liu, Will  Ferrell, Emma  Mackey, Ryan  Gosling, Viola  Davis"
+    },
+    {
+      "ID": 8,
+      "Title": "Harry Potter and the Chamber of Secrets",
+      "Type": "Horror",
+      "Price": "10.00",
+      "Tax": "1.00",
+      "Total": "11.00",
+      "Actors": "Alan  Rickman, Tom  Felton, Rupert  Grint, Emma  Watson, Daniel  Radcliffe"
+    },
+    {
+      "ID": 2,
+      "Title": "Kung Fu Panda 4",
+      "Type": "Family",
+      "Price": "15.00",
+      "Tax": "1.50",
+      "Total": "16.50",
+      "Actors": "Ke Huy Quan, Viola  Davis, James  Hong, Bryan  Cranston, Nora Akwafina Lum, Jack  Black"
+    },
+    {
+      "ID": 1,
+      "Title": "No Strings Attached",
+      "Type": "Romance",
+      "Price": "10.00",
+      "Tax": "1.00",
+      "Total": "11.00",
+      "Actors": "Lake  Bell, Kevin  Kline, Greta  Gerwig, Aston  Kutcher, Natalie  Portman"
+    },
+    {
+      "ID": 7,
+      "Title": "Spider-Man No Way Home",
+      "Type": "Science Fiction",
+      "Price": "14.50",
+      "Tax": "1.45",
+      "Total": "15.95",
+      "Actors": "William  Dafoe, Toby  Maguire, Jacob  Batalon, Zendeya  Coleman, Tom  Holland, Andrew  Garfield"
+    },
+    {
+      "ID": 5,
+      "Title": "Spirited Away",
+      "Type": "Family",
+      "Price": "13.50",
+      "Tax": "1.35",
+      "Total": "14.85",
+      "Actors": "Mari  Natsuki, Yumi  Tamai, Kamiki  Ryunosuke, Miyu  Irino, Rumi  Hiiragi"
+    },
+    {
+      "ID": 9,
+      "Title": "Suicide Squad",
+      "Type": "Science Fiction",
+      "Price": "13.00",
+      "Tax": "1.30",
+      "Total": "14.30",
+      "Actors": "Cara  Delevingne, Joel  Kinnanman, Will  Smith, Jared  Leto, Margot  Robbie"
+    },
+    {
+      "ID": 3,
+      "Title": "The Amazing Spider-Man",
+      "Type": "Science Fiction",
+      "Price": "11.50",
+      "Tax": "1.15",
+      "Total": "12.65",
+      "Actors": "Andrew  Garfield, Emma  Stone, Stan  Lee, Sally  Field, Jamie  Foxx"
+    },
+    {
+      "ID": 4,
+      "Title": "The Nun",
+      "Type": "Horror",
+      "Price": "13.40",
+      "Tax": "1.34",
+      "Total": "14.74",
+      "Actors": "Vera  Farmiga, Demian  Bichir, Jonas  Bloquet, Bonnie  Aarons, Taissa  Farmiga"
+    }
+  ]
+}

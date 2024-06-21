@@ -2,34 +2,22 @@ import { Utilities } from "../modules/utilities.js";
 const utilities = new Utilities();
 import { backend } from "../JS/backend.js";
 import { table, renderTable } from "./Table.js";
-// 
-const headers = [
-    `No.`,
-    `ID`,
-    `Customer`,
-    `Movies`,
-    `Price (K)`,
-    `Tax (K)`,
-    `Total (K)`,
-    `Date`
-]
-// 
-renderCustomerList()
-export function renderCustomerList() {
-    // const url = `../CustomData/Recent.json`;
-    const apiKey = `v1/get_recent_transactions`
-    const url = `${backend()}${apiKey}`;
-    const configs = {
-        method: `GET`
-    }
-    utilities.fetchData(url, configs, response => {
-        const data = table(response, headers);
-        renderTable(data, `recentTransactions`);
-    })
+import { redirectTo, showUser, logoutUser } from "./helpers.js";
+//
+const login_status = localStorage.getItem(`admin`)
+if (login_status != null) {
+    // logged in code
+    renderCustomerList()
+    totals()
+    RentSummary()
+    MovieDetails()
+    // 
+    showUser(`userID`)
+    logoutUser(`logout`, `admin`, `signin`)
+} else {
+    redirectTo('../Pages/signin.html', 0, false);
 }
-
-
-totals()
+// 
 function totals() {
     // const url = `../CustomData/Totals.json`;
     const apiKey = `v1/get_totals`
@@ -37,11 +25,8 @@ function totals() {
     const configs = {
         method: `GET`
     }
-    // 
-    utilities.fetchData(`http://localhost:1605/v1/get_totals`, configs, response => {
-
-        utilities.print(response)
-        return 0
+    //
+    utilities.fetchData(url, configs, response => {
         // response = Object.values(response[0])
         const totals = utilities.getDom(`.totals`);
         let counter = 0;
@@ -56,8 +41,31 @@ function totals() {
     })
 }
 //
-// 
-RentSummary()
+function renderCustomerList() {
+    // const url = `../CustomData/Recent.json`;
+    const apiKey = `v1/get_recent_transactions`
+    const url = `${backend()}${apiKey}`;
+    const configs = {
+        method: `GET`
+    }
+    const headers = [
+        `No.`,
+        `ID`,
+        `Customer`,
+        `Movies`,
+        `Price (K)`,
+        `Tax (K)`,
+        `Total (K)`,
+        `Date`
+    ]
+    utilities.fetchData(url, configs, response => {
+        const data = table(response, headers);
+        renderTable(data, `recentTransactions`);
+    })
+}
+//
+
+
 function RentSummary() {
     // const url = `../CustomData/RentalSummary.json`;
     const apiKey = `v1/get_rental_status_summary`
@@ -65,10 +73,9 @@ function RentSummary() {
     const configs = {
         method: `GET`
     }
-    // 
+    //
     utilities.fetchData(url, configs, response => {
         response = Object.values(response[0])
-
         const valuesMovies = response.slice(0, 2)
         const subjectsMovies = ["Rented", "Not Rented"];
         const barColorsMovies = [
@@ -98,7 +105,7 @@ function RentSummary() {
                 }
             }
         });
-        // 
+        //
         new Chart("customerChart", {
             type: "doughnut",
             data: {
@@ -118,16 +125,15 @@ function RentSummary() {
     })
 }
 
-// 
-MovieDetails()
+//
 function MovieDetails() {
-    // const url = `../CustomData/MovieData.json`;
+    const url = `../CustomData/MovieData.json`;
     const apiKey = `v1/get_each_movie_earnings`
-    const url = `${backend()}${apiKey}`;
+    // const url = `${backend()}${apiKey}`;
     const configs = {
         method: `GET`
     }
-    // 
+    //
     utilities.fetchData(url, configs, response => {
         response = getMovieDetails(response)
         const groupedDetails = groupMovieDetails(response);
@@ -141,7 +147,7 @@ function MovieDetails() {
         ];
     })
 }
-
+// 
 function getMovieDetails(movies) {
     return movies.map(movie => ({
         name: movie.Movie_Title,
@@ -151,7 +157,7 @@ function getMovieDetails(movies) {
         totalTransactions: movie.Total_Transactions
     }));
 }
-
+// 
 function groupMovieDetails(movieDetails) {
     return movieDetails.reduce((acc, movie) => {
         acc.names.push(movie.name);
@@ -168,4 +174,3 @@ function groupMovieDetails(movieDetails) {
         totalTransactions: []
     });
 }
-

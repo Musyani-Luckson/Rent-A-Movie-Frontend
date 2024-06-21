@@ -37,6 +37,7 @@ utilities.handleEvent(form, `submit`, event => {
             'Content-Type': 'application/json'
         }
     }
+    // 
     utilities.fetchData(url, configs, response => {
         clearMsgBoxes(msgBoxes)
         if (response.error) {
@@ -44,14 +45,15 @@ utilities.handleEvent(form, `submit`, event => {
             const target = response.error.target;
             utilities.setInnerText(msgBoxes[target], msg)
         } else {
-            window.location.href = response.redirect;
-            // console.log(response)
-            // redirectTo('../index.html', 0, false);
+            localStorage.clear(`admin`)
+            localStorage.setItem(`admin`, response.email)
+            redirectTo('../index.html', 0, false);
         }
     })
 })
 // 
 function redirectTo(url, delay = 0, replace = false) {
+
     if (delay > 0) {
         setTimeout(function () {
             if (replace) {

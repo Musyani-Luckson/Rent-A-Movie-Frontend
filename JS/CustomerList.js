@@ -5,7 +5,15 @@ import { table, renderTable } from "./Table.js";
 import { backend } from "../JS/backend.js";
 const apiKey = `v1/get_customer_list_data`
 const url = `${backend()}${apiKey}`;
-
+import { redirectTo, showUser } from "./helpers.js";
+//
+const login_status = localStorage.getItem(`admin`)
+if (login_status != null) {
+    // logged in code
+    showUser(`userID`)
+} else {
+    redirectTo('../Pages/signin.html', 0, false);
+}
 // 
 const headers = [
     `No.`,

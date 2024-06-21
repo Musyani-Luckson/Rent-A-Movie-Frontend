@@ -74,12 +74,12 @@
                 </div>
                 <div class="largeScreensMenuBtn position-relative">
                     <button type="button" class="btn border rounded position-relative btn-sm">
-                        fake@gmail.com
+                        <span class="userID"></span>
                         <span class="position-absolute top-0 start-100 translate-middle p-2 bg-success rounded-circle">
                         </span>
                     </button>
                     <!--  -->
-                    <button type="button" class="btn btn-danger btn-sm m-1">
+                    <button type="button" class="btn btn-danger btn-sm m-1 logout">
                         Logout
                     </button>
                 </div>
@@ -136,16 +136,12 @@
             <!--  -->
             <div class="mainMainLeft row p-1 m-1 justify-content-center">
                 <!--  -->
-                <div class="card text-center m-1 col-12 col-sm-4 col-md-3 col-lg-2">
-                    <div class="card-body border-0">
-                        <canvas id="movieChart" style="width:100%; max-width:500px"></canvas>
-                    </div>
+                <div class="card m-1">
+                    <canvas id="movieChart"></canvas>
                 </div>
                 <!--  -->
-                <div class="card text-center m-1 col-12 col-sm-4 col-md-3 col-lg-2">
-                    <div class="card-body border-0">
-                        <canvas id="customerChart" style="width:100%; max-width:500px"></canvas>
-                    </div>
+                <div class="card m-1">
+                    <canvas id="customerChart"></canvas>
                 </div>
                 <!--  -->
             </div>
@@ -164,8 +160,8 @@
             aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasExampleLabel">
-                    <button type="button" class="btn border rounded position-relative btn-sm">
-                        fake@gmail.com
+                    <button type="button" class="btn border rounded position-relative btn-sm ">
+                        <span class="userID"></span>
                         <span class="position-absolute top-0 start-100 translate-middle p-2 bg-success rounded-circle">
                         </span>
                     </button>
@@ -205,7 +201,7 @@
             </div>
             <!--  -->
             <div class="p-1">
-                <button type="button" class="btn btn-danger btn-sm m-1">
+                <button type="button" class="btn btn-danger btn-sm m-1 logout">
                     Logout
                 </button>
             </div>

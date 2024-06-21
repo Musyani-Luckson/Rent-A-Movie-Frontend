@@ -1,0 +1,1 @@
+SELECT * FROM zip_code;

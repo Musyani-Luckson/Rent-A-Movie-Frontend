@@ -1,0 +1,23 @@
+
+
+/* Mobile Devices (portrait and landscape) up to 767px */
+@media only screen and (max-width: 567px) {
+    .innerMainBox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+}
+/* Tablets and Min Laptops 768px */
+@media only screen and (min-width: 568px) {
+    .innerMainBox {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+}
+/* Desktops and larger screens 1340px*/
+@media only screen and (min-width: 840px) {
+    .innerMainBox {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+}
