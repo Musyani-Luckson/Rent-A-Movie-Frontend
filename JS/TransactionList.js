@@ -5,7 +5,8 @@ import { backend } from "../JS/backend.js";
 const apiKey = `v1/get_transaction_list_data`
 const url = `${backend()}${apiKey}`;
 import { table, renderTable } from "./Table.js";
-import { redirectTo, showUser } from "./helpers.js";
+import { redirectTo, showUser, logoutUser } from "./helpers.js";
+logoutUser(`logout`, `admin`, `signin`)
 //
 const login_status = localStorage.getItem(`admin`)
 if (login_status != null) {
